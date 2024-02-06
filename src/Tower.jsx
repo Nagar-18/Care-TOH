@@ -121,7 +121,7 @@ function towerOfHanoi(n, source, auxiliary, destination) {
   };
 
   const handle = (tower) => {
-  if(tower>ans.size()||tower<-1)return;
+  
    if(tower>currIndex){ 
    if(tower>=0&&tower<=ans.length)
      {
@@ -137,7 +137,7 @@ function towerOfHanoi(n, source, auxiliary, destination) {
         }
       } 
       setHold(null);
-    }
+    }setCurrIndex(tower);
 }
 
  else   if(tower>=0&&tower<=ans.length)
@@ -154,6 +154,7 @@ function towerOfHanoi(n, source, auxiliary, destination) {
         }
       } 
       setHold(null);
+      setCurrIndex(tower);
     }
     else{
 
@@ -167,13 +168,14 @@ function towerOfHanoi(n, source, auxiliary, destination) {
         }
       } 
       setHold(null);
+      setCurrIndex(-1);
     }
 
 
 
 
  
-  setCurrIndex(tower);
+  
   
   };
 
