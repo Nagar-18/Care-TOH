@@ -121,7 +121,7 @@ function towerOfHanoi(n, source, auxiliary, destination) {
   };
 
   const handle = (tower) => {
-  console.log(tower)
+  if(tower>ans.size()||tower<-1)return;
    if(tower>currIndex){ 
    if(tower>=0&&tower<=ans.length)
      {
